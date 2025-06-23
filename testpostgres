@@ -1,0 +1,9 @@
+# Prueba rápida en database.py (ejecútala temporalmente)
+if __name__ == "__main__":
+    try:
+        engine = create_engine(SQLALCHEMY_DATABASE_URL)
+        connection = engine.connect()
+        print("✅ Conexión a PostgreSQL exitosa!")
+        connection.close()
+    except Exception as e:
+        print("❌ Error conectando a PostgreSQL:", e)
